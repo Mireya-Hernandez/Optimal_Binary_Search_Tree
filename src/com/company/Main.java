@@ -28,7 +28,7 @@ public class Main {
         double[] prob = randomProbabilty((numKeys * 2) + 1); // probability of the sucesses and fails
 
         //write input (keys) into a file
-        PrintWriter writeKeys = new PrintWriter(new File("keyFile.txt"));
+        PrintWriter writeKeys = new PrintWriter(new File("10000keyFile.txt"));
         for (int num = 0; num < keys.length; num++) {
 
             writeKeys.println(keys[num]);
@@ -37,7 +37,7 @@ public class Main {
         writeKeys.close();
 
         //writing the random probability into a file
-        PrintWriter writeProbs = new PrintWriter(new File("ProbFile.txt"));
+        PrintWriter writeProbs = new PrintWriter(new File("20001ProbFile.txt"));
         for (int num = 0; num < prob.length; num++) {
 
             writeProbs.printf("%n%.4f", prob[num]);
@@ -65,20 +65,20 @@ public class Main {
         double[][] root = optminalBinaryTree(searchHit, searchFail, numKeys, expectedCost);
 
         //Storing the expected cost into the eMatrix file
-        PrintWriter writeExpectedCost = new PrintWriter(new File ("eMatrix.txt"));
+        PrintWriter writeExpectedCost = new PrintWriter(new File ("10000KeyExpectedMatrix.txt"));
         for (int i = 0; i < expectedCost.length; i++) {
             for (int j = 0; j <expectedCost[i].length; j++){
-                writeExpectedCost.println( expectedCost[i][j] + "  "  );
+                writeExpectedCost.print( expectedCost[i][j]);
             }
 
         }
         writeExpectedCost.close();
 
         //Storing the root matrixs into the rMatrix file
-        PrintWriter writeRoot = new PrintWriter(new File ("rMatrix.txt"));
+        PrintWriter writeRoot = new PrintWriter(new File ("10000KeyRootMatrix.txt"));
         for (int i = 0; i < root.length; i++) {
             for (int j = 0; j < root[i].length; j++) {
-                writeRoot.println( root[i][j] + " "  );
+                writeRoot.print( root[i][j]);
             }
 
         }
