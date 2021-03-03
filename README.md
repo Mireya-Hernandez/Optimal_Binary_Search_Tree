@@ -16,4 +16,4 @@
 
 # Graph 
 
-![alt text](http://url/to/img.png)
+![alt text](https://github.com/Mireya-Hernandez/Optimal_Binary_Search_Tree/blob/master/Graph.PNG)
